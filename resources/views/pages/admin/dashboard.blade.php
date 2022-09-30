@@ -34,7 +34,7 @@
                         <div class="card mb-2">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Transactions</div>
-                                <div class="dashboard-card-subtitle">{{ number_format($transaction_count) }}</div>
+                                <div class="dashboard-card-subtitle">{{ number_format($transaction) }}</div>
                             </div>
                         </div>
                     </div>

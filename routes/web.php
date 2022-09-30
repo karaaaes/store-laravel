@@ -45,7 +45,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard/products/{id}', 'DashboardProductController@details')->name('dashboard-product-details');
     Route::post('/dashboard/products/{id}', 'DashboardProductController@update')->name('dashboard-product-update');
 
-    
+
     Route::post('/dashboard/products/gallery/upload', 'DashboardProductController@uploadGallery')->name('dashboard-product-gallery-upload');
     Route::get('/dashboard/products/gallery/delete/{id}', 'DashboardProductController@deleteGallery')->name('dashboard-product-gallery-delete');
 

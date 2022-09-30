@@ -27,7 +27,7 @@
                     <img src="/images/admin.png" class="my-4" alt="" style="max-width: 150px;" />
                 </div>
                 <div class="list-group list-group-flush">
-                    <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action">Dashboard</a>
+                    <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/')) ? 'active' : ''}}">Dashboard</a>
                     <a href="{{ route('product.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/product')) ? 'active' : ''}}">Products</a>
                     <a href="{{ route('product-gallery.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/product-gallery*')) ? 'active' : ''}}">Products Gallery</a>
                     <a href="{{ route('category.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/category*')) ? 'active' : ''}}">Categories</a>

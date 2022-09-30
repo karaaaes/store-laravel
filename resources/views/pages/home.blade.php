@@ -78,21 +78,20 @@
                         $incrementProductCategory = 0;
                     @endphp
                     @forelse ($products as $product)
-                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="{{ $incrementCategory += 100 }}">
+                        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up"
+                            data-aos-delay="{{ $incrementCategory += 100 }}">
                             <a href="{{ route('detail', $product->slug) }}" class="component-products d-block">
                                 <div class="products-thumbnail">
-                                    <div class="products-image" style="
-                                        @if($product->galleries->count())
-                                            background-image:url('{{ Storage::url($product->galleries->first()->photos) }}')
+                                    <div class="products-image"
+                                        style="
+                                        @if ($product->galleries->count()) background-image:url('{{ Storage::url($product->galleries->first()->photos) }}')
                                         @else
-                                            background-color:#eee
-
-                                        @endif
+                                            background-color:#eee @endif
                                         ">
                                     </div>
                                 </div>
                                 <div class="products-text">{{ $product->name }}</div>
-                                <div class="products-price">Rp. {{ $product->price }}</div>
+                                <div class="products-price">Rp. {{ number_format($product->price) }}</div>
                             </a>
                         </div>
                     @empty
