@@ -1,0 +1,20 @@
+.page-success {
+    .row-login {
+        min-height: 75vh;
+        //vh adalah ukuran browser
+    }
+
+    .section-success {
+        h2 {
+            font-weight: 400;
+            font-size: 28px;
+            color: #0C0D36;
+            margin-top: 0;
+        }
+
+        .btn-signup{
+            @include button-variant(#F3F3F3, transparent);
+            color: #bbbbbb;
+        }
+    }
+}
